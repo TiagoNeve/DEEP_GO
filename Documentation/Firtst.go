@@ -1,6 +1,7 @@
 package main
 
 import (
+	"example.com/hello/Documentation/Greetings" // example.com/hello (root) - path.
 	"fmt"
 )                     // Pacote interno do go de formatação de textos.
 import "rsc.io/quote" // Importando pacotes diretamente da internet.
@@ -8,7 +9,9 @@ import "rsc.io/quote" // Importando pacotes diretamente da internet.
 func main() {
 	//OlaMundo()
 	//QuoteCall()
-	testFmt()
+	//testFmt()
+	message := Greetings.Hello("Tiagão")
+	fmt.Println(message)
 }
 
 func testFmt() {
