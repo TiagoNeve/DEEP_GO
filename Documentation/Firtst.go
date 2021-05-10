@@ -1,6 +1,8 @@
 package main
 
-import "fmt"          // Pacote interno do go de formatação de textos.
+import (
+	"fmt"
+)                     // Pacote interno do go de formatação de textos.
 import "rsc.io/quote" // Importando pacotes diretamente da internet.
 
 func main() {
@@ -10,7 +12,15 @@ func main() {
 }
 
 func testFmt() {
-	fmt.Println("Aqui mostra um texto normal")
+	// fmt.Println("Aqui mostra um texto normal")
+
+	//fmt.Println(fmt.Errorf("essa é uma mensagem de error que pode ser formatada"))
+
+	// fmt.Print("Escreve um texto normal que pode ter variaveis separadas por ,")
+	// fmt.Print("E não pula a linha, padrão")
+
+	// n, err := fmt.Fprint(os.Stdout, "Verifica a quantidade de bytes em um texto")
+
 }
 
 func OlaMundo() {
