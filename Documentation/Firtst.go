@@ -1,12 +1,20 @@
 package main
 
 import (
-	"example.com/hello/Documentation/Greetings" // example.com/hello (root) - path.
-	"fmt"                                       // Pacote interno do go de formatação de textos.
+	"example.com/hello/Documentation/Errors"
+	"fmt"
+	"log"
 )
 
 func main() {
+	log.SetPrefix("Errors: ")
+	log.SetFlags(0)
 
-	message := Greetings.Hello("Tiagão")
+	message, err := Errors.ErrHello("")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println(message)
 }
